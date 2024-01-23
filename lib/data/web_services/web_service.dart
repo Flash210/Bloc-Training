@@ -2,7 +2,6 @@
 
 
  import 'package:bloct_training/constants/strings.dart';
-import 'package:bloct_training/data/models/model.dart';
 import 'package:dio/dio.dart';
 
 class WebService{
@@ -27,11 +26,9 @@ Future<List<Map<String, dynamic>>?>  getALl() async {
 try{
 
   Response response = await dio.get('character');
-
-  print("helllllo"+response.data.toString());
+    //print("response data = "+response.data.toString());
   return response.data;
 }catch(e){
-  print("noooooooo"+e.toString());
   return [];
 }
 

@@ -5,8 +5,7 @@ sealed class MyState {}
 
 final class MyInitial extends MyState {}
 
-class DataLoaded extends MyState{
-  final List<Films> films;
+class DataLoaded extends MyState {
+  final List<Results> films;
   DataLoaded(this.films);
 }
-
